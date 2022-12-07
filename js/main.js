@@ -1,28 +1,28 @@
 
 
 let stockGoodyear = 100;
-const precioGoodyear = 180;
+let precioGoodyear = 180;
 
 let stockPirelli = 100;
-const precioPirelli = 200;
+let precioPirelli = 200;
 
 let stockKumho = 100;
-const precioKumho = 150;
+let precioKumho = 150;
 
 let stockToyo = 100;
-const precioToyo = 165;
+let precioToyo = 165;
 
 let stockMichelin = 100;
-const precioMichelin = 210;
+let precioMichelin = 210;
 
 let stockYokohama = 100;
-const precioYokohama = 170;
+let precioYokohama = 170;
 
 let stockSailun = 100;
-const precioSailun = 130;
+let precioSailun = 130;
 
 let stockDunlop = 100;
-const precioDunlop = 155;
+let precioDunlop = 155;
 
 alert("Has ingresado a la web de TireShop Montevideo , contamos con las siguientes marcas en stock actualmente en varias medidas y rodados. (Goodyear , Pirelli , Kumho , Toyo , Michelin , Yokohama , Sailun , Dunlop).");
 
