@@ -1,104 +1,77 @@
 
+const marca1 = "Pirelli";
+const marca2 = "Michelin";
+const marca3 = "Kumho";
+const marca4 = "Toyo";
+const marca5 = "Goodyear";
+const marca6 = "Yokohama";
 
-let stockGoodyear = 100;
-let precioGoodyear = 180;
+const precio1 = 100;
+const precio2 = 125;
+const precio3 = 150;
+const precio4 = 175;
+const precio5 = 200;
+const precio6 = 225;
 
-let stockPirelli = 100;
-let precioPirelli = 200;
+let cantidad1 = 0;
+let cantidad2 = 0;
+let cantidad3 = 0;
+let cantidad4 = 0;
+let cantidad5 = 0;
+let cantidad6 = 0;
 
-let stockKumho = 100;
-let precioKumho = 150;
+let input = prompt("Bienvenido a Tire Shop , contamos con neumaticos Pirelli , Michelin , Kumho , Toyo , Goodyear y Yokohama , escribe la marca que deseas agregar a tu carrito y al finalizar escribe 0 para salir.");
 
-let stockToyo = 100;
-let precioToyo = 165;
+function shoppingCart() {
+    while (input != 0) {
 
-let stockMichelin = 100;
-let precioMichelin = 210;
+        if (input == marca1) {
+            alert("Elegiste la marca " + marca1 + " , su costo por unidad es de " + precio1 + " dolares");
+            cantidad1 = prompt("Ingresa la cantidad de neumaticos que quieres ordenar");
+        }
+        else if (input == marca2) {
+            alert("Elegiste la marca " + marca2 + " , su costo por unidad es de " + precio2 + " dolares");
+            cantidad2 = prompt("Ingresa la cantidad de neumaticos que quieres ordenar");
+        }
+        else if (input == marca3) {
+            alert("Elegiste la marca " + marca3 + " , su costo por unidad es de " + precio3 + " dolares");
+            cantidad3 = prompt("Ingresa la cantidad de neumaticos que quieres ordenar");
+        }
+        else if (input == marca4) {
+            alert("Elegiste la marca " + marca4 + " , su costo por unidad es de " + precio4 + " dolares");
+            cantidad4 = prompt("Ingresa la cantidad de neumaticos que quieres ordenar");
+        }
+        else if (input == marca5) {
+            alert("Elegiste la marca " + marca5 + " , su costo por unidad es de " + precio5 + " dolares");
+            cantidad5 = prompt("Ingresa la cantidad de neumaticos que quieres ordenar");
+        }
+        else if (input == marca6) {
+            alert("Elegiste la marca " + marca6 + " , su costo por unidad es de " + precio6 + " dolares");
+            cantidad6 = prompt("Ingresa la cantidad de neumaticos que quieres ordenar");
+        }
+        else {
+            alert("Lo sentimos , no contamos con esa marca de neumaticos o hiciste click en cancelar");
+        }
 
-let stockYokohama = 100;
-let precioYokohama = 170;
+        input = prompt("Ingresa otra marca de neumaticos o escribe 0 para salir y terminar la compra.");
+    }
 
-let stockSailun = 100;
-let precioSailun = 130;
+    let nombreCompleto = prompt("Porfavor ingresa tu nombre y apellido para terminar tu pedido");
 
-let stockDunlop = 100;
-let precioDunlop = 155;
-
-alert("Has ingresado a la web de TireShop Montevideo , contamos con las siguientes marcas en stock actualmente en varias medidas y rodados. (Goodyear , Pirelli , Kumho , Toyo , Michelin , Yokohama , Sailun , Dunlop).");
-
-let nombreCompleto = prompt("Porfavor ingresa tu nombre y apellido para realizar tu pedido");
-
-let marcaOrdenada = prompt("¿Que Marca Te Gustaria Ordenar?");
-
-switch (marcaOrdenada) {
-    case "Goodyear":
-        alert("Contamos con " + stockGoodyear + " " + marcaOrdenada + " y su costo unitario es de " + precioGoodyear);
-        break;
-    case "Pirelli":
-        alert("Contamos con " + stockPirelli + " " + marcaOrdenada + " y su costo unitario es de " + precioPirelli);
-        break;
-    case "Kumho":
-        alert("Contamos con " + stockKumho + " " + marcaOrdenada + " y su costo unitario es de " + precioKumho);
-        break;
-    case "Toyo":
-        alert("Contamos con " + stockToyo + " " + marcaOrdenada + " y su costo unitario es de " + precioToyo);
-        break;
-    case "Michelin":
-        alert("Contamos con " + stockMichelin + " " + marcaOrdenada + " y su costo unitario es de " + precioMichelin);
-        break;
-    case "Yokohama":
-        alert("Contamos con " + stockYokohama + " " + marcaOrdenada + " y su costo unitario es de " + precioYokohama);
-        break;
-    case "Sailun":
-        alert("Contamos con " + stockSailun + " " + marcaOrdenada + " y su costo unitario es de " + precioSailun);
-        break;
-    case "Dunlop":
-        alert("Contamos con " + stockDunlop + " " + marcaOrdenada + " y su costo unitario es de " + precioDunlop);
-        break;
-    default:
-        alert("No contamos con la marca " + marcaOrdenada);
+    alert("Gracias por elegirnos " + nombreCompleto + " , tu compra ha sido confirmada y sera procesada a la brevedad");
 }
 
-let cantidadOrdenada = prompt("Vemos que elegiste la marca " + marcaOrdenada + " , porfavor ingresa la cantidad que te gustaria recibir");
+shoppingCart();
 
-if (cantidadOrdenada < 1) {
-    alert("Lo sentimos , pero no puedes ordenar 0 cubiertas");
-} else {
-    alert("Perfecto , tu pedido de " + cantidadOrdenada + " cubiertas " + marcaOrdenada + " sera confirmado a la brevedad");
+function finalPrice() {
+    let final1 = cantidad1 * precio1;
+    let final2 = cantidad2 * precio2;
+    let final3 = cantidad3 * precio3;
+    let final4 = cantidad4 * precio4;
+    let final5 = cantidad5 * precio5;
+    let final6 = cantidad6 * precio6;
+    let precioFinal = final1 + final2 + final3 + final4 + final5 + final6;
+    alert("El importe final de tu compra es de " + precioFinal + " dolares");
 }
 
-let precioTotal = 1;
-
-if (marcaOrdenada = "Goodyear") {
-    precioTotal = cantidadOrdenada * precioGoodyear;
-}
-
-if (marcaOrdenada = "Pirelli") {
-    precioTotal = cantidadOrdenada * precioPirelli;
-}
-
-if (marcaOrdenada = "Kumho") {
-    precioTotal = cantidadOrdenada * precioKumho;
-}
-
-if (marcaOrdenada = "Toyo") {
-    precioTotal = cantidadOrdenada * precioToyo;
-}
-
-if (marcaOrdenada = "Michelin") {
-    precioTotal = cantidadOrdenada * precioMichelin;
-}
-
-if (marcaOrdenada = "Yokohama") {
-    precioTotal = cantidadOrdenada * precioYokohama;
-}
-
-if (marcaOrdenada = "Sailun") {
-    precioTotal = cantidadOrdenada * precioSailun;
-}
-
-if (marcaOrdenada = "Dunlop") {
-    precioTotal = cantidadOrdenada * precioDunlop;
-}
-
-alert("El precio final de tu orden es de " + precioTotal + " dolares , muchas gracias " + nombreCompleto + " por confiar en nosotros");
+finalPrice();
